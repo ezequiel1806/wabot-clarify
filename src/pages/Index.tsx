@@ -6,9 +6,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { MessageSquare, FileText, Settings, Upload, Database, Activity, TrendingUp } from "lucide-react";
+import { MessageSquare, FileText, Settings, Upload, Database, Activity, TrendingUp, LogOut, User } from "lucide-react";
+import { useAuth } from "@/contexts/AuthContext";
 
 const Index = () => {
+  const { user, profile, signOut, isAdmin } = useAuth();
   const [documents, setDocuments] = useState([
     { id: 1, name: "FAQ Produtos.pdf", size: "2.3 MB", chunks: 45, status: "Ativo" },
     { id: 2, name: "Manual de Atendimento.docx", size: "1.8 MB", chunks: 32, status: "Ativo" },
@@ -35,9 +37,31 @@ const Index = () => {
                 <p className="text-sm text-muted-foreground">Sistema de Atendimento Inteligente</p>
               </div>
             </div>
-            <Badge variant="outline" className="text-green-600 border-green-200">
-              ● Sistema Ativo
-            </Badge>
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2">
+                <User className="h-4 w-4 text-muted-foreground" />
+                <span className="text-sm text-muted-foreground">
+                  {profile?.display_name || user?.email}
+                </span>
+                {isAdmin && (
+                  <Badge variant="secondary" className="text-xs">
+                    Admin
+                  </Badge>
+                )}
+              </div>
+              <Badge variant="outline" className="text-green-600 border-green-200">
+                ● Sistema Ativo
+              </Badge>
+              <Button 
+                variant="outline" 
+                size="sm" 
+                onClick={signOut}
+                className="flex items-center gap-2"
+              >
+                <LogOut className="h-4 w-4" />
+                Sair
+              </Button>
+            </div>
           </div>
         </div>
       </header>
