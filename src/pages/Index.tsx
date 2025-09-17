@@ -49,7 +49,7 @@ const Index = () => {
                   </Badge>
                 )}
               </div>
-              <Badge variant="outline" className="text-green-600 border-green-200">
+              <Badge variant="outline" className="text-success border-success/20">
                 ● Sistema Ativo
               </Badge>
               <Button 
@@ -187,7 +187,7 @@ const Index = () => {
                 <CardContent>
                   <div className="space-y-4">
                     <div className="flex items-start space-x-3 p-3 border rounded">
-                      <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                      <div className="w-2 h-2 bg-success rounded-full mt-2"></div>
                       <div className="flex-1">
                         <p className="text-sm font-medium">+55 11 99999-1234</p>
                         <p className="text-sm text-muted-foreground">Como faço para cancelar meu pedido?</p>
@@ -195,7 +195,7 @@ const Index = () => {
                       </div>
                     </div>
                     <div className="flex items-start space-x-3 p-3 border rounded">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
+                      <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
                       <div className="flex-1">
                         <p className="text-sm font-medium">+55 11 88888-5678</p>
                         <p className="text-sm text-muted-foreground">Qual o prazo de entrega para SP?</p>
@@ -203,7 +203,7 @@ const Index = () => {
                       </div>
                     </div>
                     <div className="flex items-start space-x-3 p-3 border rounded">
-                      <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
+                      <div className="w-2 h-2 bg-destructive rounded-full mt-2"></div>
                       <div className="flex-1">
                         <p className="text-sm font-medium">+55 11 77777-9012</p>
                         <p className="text-sm text-muted-foreground">Preciso falar com um atendente</p>
@@ -235,7 +235,7 @@ const Index = () => {
                         <span>87.8%</span>
                       </div>
                       <div className="w-full bg-secondary rounded-full h-2">
-                        <div className="bg-green-500 h-2 rounded-full" style={{ width: "87.8%" }}></div>
+                        <div className="bg-success h-2 rounded-full" style={{ width: "87.8%" }}></div>
                       </div>
                     </div>
                     <div>
@@ -244,7 +244,7 @@ const Index = () => {
                         <span>1.2s</span>
                       </div>
                       <div className="w-full bg-secondary rounded-full h-2">
-                        <div className="bg-blue-500 h-2 rounded-full" style={{ width: "85%" }}></div>
+                        <div className="bg-accent h-2 rounded-full" style={{ width: "85%" }}></div>
                       </div>
                     </div>
                   </div>
